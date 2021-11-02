@@ -1,15 +1,13 @@
-import Header from '../components/Header'
-import Meta from '../components/Meta'
+import Pricing from '../components/Pricing'
+import Hero from '../components/Hero'
 
 const Home = () => {
   // page content
-  const pageTitle = 'Home'
-  const pageDescription = 'welcome to react bootstrap template'
 
   return (
     <div>
-      <Meta title={pageTitle}/>
-      <Header head={pageTitle} description={pageDescription} />
+      <Hero/>
+      <Pricing/>
     </div>
   )
 }
