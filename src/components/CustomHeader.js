@@ -1,11 +1,11 @@
-import { Navbar,Nav,NavDropdown,Form,FormControl,Button, Container} from 'react-bootstrap'
+import { Navbar,Nav,NavDropdown, Container} from 'react-bootstrap'
 
 const CustomHeader = ({ head, description }) => {
   return (
     <div>
         <Navbar bg="light" expand="lg">
             <Container >
-                <Navbar.Brand href="#">Navbar scroll</Navbar.Brand>
+                <Navbar.Brand href="/">Navbar scroll</Navbar.Brand>
                 <Navbar.Toggle aria-controls="navbarScroll" />
                 <Navbar.Collapse id="navbarScroll">
                     <Nav
@@ -13,9 +13,10 @@ const CustomHeader = ({ head, description }) => {
                         style={{ maxHeight: '100px' }}
                         
                     >
-                        <Nav.Link href="#action1">Home</Nav.Link>
-                        <Nav.Link href="#action2">Features</Nav.Link>
-                        <Nav.Link href="#action3">Pricing</Nav.Link>
+                        <Nav.Link href="/">Home</Nav.Link>
+                        <Nav.Link href="/#features">Features</Nav.Link>
+                        <Nav.Link href="/#pricing">Pricing</Nav.Link>
+                        <Nav.Link href="/dashboard">Dashboard</Nav.Link>
 
                     </Nav>
                     <NavDropdown title="Get Started" id="navbarScrollingDropdown" className="btn outline-success">
