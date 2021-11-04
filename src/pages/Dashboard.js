@@ -9,7 +9,7 @@ const Dashboard = () => {
       <div className="col-2">
         <DashboardSideNav/>
       </div>
-      <div className="col-10" style={{minHeight:"45em"}}>
+      <div className="col-10" style={{minHeight:"52em"}}>
         <div className="jumbotron">
           <div class="h-100 p-5 bg-light border rounded-3">
             <h2>Dashboard</h2>
