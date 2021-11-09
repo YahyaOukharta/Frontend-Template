@@ -14,7 +14,7 @@ const Crud = () => {
         const logResponse = logs + "HELLOOOOOO:  testt\n"
         setLogs(logResponse);
         if(logsFixedScrolling)
-          logsRef.current.scrollTop = 150000;
+          logsRef.current.scrollTop = logsRef.current.scrollHeight;
         
       } catch {
         // just don't update state, or set an error message in state,
@@ -27,7 +27,7 @@ const Crud = () => {
   
     // function to clean up effect when component unmounts
     return () => clearInterval(intervalTimer);
-  }, [logs]);
+  });
   // modals
   const [showEditModal, setEditModal] = useState(false);
   const [showDeleteModal, setDeleteModal] = useState(false);
@@ -105,7 +105,7 @@ const Crud = () => {
           <button type="button" style={{marginLeft:"auto"}} class="btn btn-primary">Download Logs file</button>
         </div>
       </div>
-      <div style={{height:"500px", overflow:"auto"}} ref={logsRef} className="border mx-2 " onScroll={(e)=>{if(e.target.scrollTop < e.target.scrollHeight) setLogsFixedScrolling(false)} }>
+      <div style={{height:"500px", overflow:"auto"}} ref={logsRef} className="border mx-2 " onScroll={(e)=>{if(e.target.offsetHeight+e.target.scrollTop < e.target.scrollHeight) setLogsFixedScrolling(false)} }>
 
         {logs && logs.split("\n").map((e,i)=>{
           return <p key={i}>{e}</p>
